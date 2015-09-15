@@ -1,0 +1,106 @@
+﻿Build started 9/12/2015 8:52:09 PM.
+     1>Project "C:\Users\Administrator\Desktop\College\DigiPen\Fall 2015\CS 541 - Adv. Computer Graphics\CS541-framework\CS541-framework\framework.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Iglsdk\boost\boost /Iglsdk\glload\include /Iglsdk\glimg\include /Iglsdk\glm /Iglsdk\freeglut\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D FREEGLUT_STATIC /D _LIB /D FREEGLUT_LIB_PRAGMAS=0 /D _ITERATOR_DEBUG_LEVEL=2 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt fbo.cpp framework.cpp models.cpp scene.cpp
+         scene.cpp
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\glsdk\glm\glm\gtx\string_cast.inl(30): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(1465): note: see declaration of 'vsprintf'
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\transform.h(20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\scene.cpp(136): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\scene.cpp(143): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\scene.cpp(152): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\scene.cpp(161): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\scene.cpp(308): warning C4305: '=': truncation from 'double' to 'float'
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\scene.cpp(313): warning C4305: '=': truncation from 'double' to 'float'
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\scene.cpp(314): warning C4305: '=': truncation from 'double' to 'float'
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\scene.cpp(316): warning C4305: '=': truncation from 'double' to 'float'
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\scene.cpp(319): warning C4305: '=': truncation from 'double' to 'float'
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\scene.cpp(320): warning C4305: '=': truncation from 'double' to 'float'
+         models.cpp
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\glsdk\glm\glm\gtx\string_cast.inl(30): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(1465): note: see declaration of 'vsprintf'
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\transform.h(20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\models.cpp(185): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\models.cpp(384): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\models.cpp(385): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\models.cpp(386): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\models.cpp(390): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\models.cpp(391): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\models.cpp(395): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\models.cpp(396): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\models.cpp(397): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\models.cpp(401): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\models.cpp(402): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\models.cpp(521): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\models.cpp(529): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\models.cpp(547): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\models.cpp(566): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+         framework.cpp
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\glsdk\glm\glm\gtx\string_cast.inl(30): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(1465): note: see declaration of 'vsprintf'
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\transform.h(20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+         fbo.cpp
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\transform.h(20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\glsdk\glm\glm\gtx\string_cast.inl(30): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(1465): note: see declaration of 'vsprintf'
+         Generating Code...
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\scene.cpp(57): warning C4715: 'HSV2RGB': not all control paths return a value
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Iglsdk\boost\boost /Iglsdk\glload\include /Iglsdk\glimg\include /Iglsdk\glm /Iglsdk\freeglut\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D FREEGLUT_STATIC /D _LIB /D FREEGLUT_LIB_PRAGMAS=0 /D _ITERATOR_DEBUG_LEVEL=2 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:prompt rply.c
+         rply.c
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\rply.c(374): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\rply.c(462): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\rply.c(492): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\rply.c(510): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\rply.c(534): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\rply.c(559): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\rply.c(573): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\rply.c(1228): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\rply.c(1243): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\rply.c(1246): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(2254): note: see declaration of 'sscanf'
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework\cs541-framework\rply.c(1268): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(1465): note: see declaration of 'vsprintf'
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator\Desktop\College\DigiPen\Fall 2015\CS 541 - Adv. Computer Graphics\CS541-framework\CS541-framework\Debug\framework.exe" /INCREMENTAL /NOLOGO /LIBPATH:glsdk\glload\lib /LIBPATH:glsdk\glimg\lib /LIBPATH:glsdk\freeglut\lib glloadD.lib glimgD.lib freeglutD.lib glu32.lib opengl32.lib gdi32.lib winmm.lib user32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Administrator\Desktop\College\DigiPen\Fall 2015\CS 541 - Adv. Computer Graphics\CS541-framework\CS541-framework\Debug\framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\Users\Administrator\Desktop\College\DigiPen\Fall 2015\CS 541 - Adv. Computer Graphics\CS541-framework\CS541-framework\Debug\framework.lib" /MACHINE:X86 /SAFESEH Debug\fbo.obj
+         Debug\framework.obj
+         Debug\rply.obj
+         Debug\scene.obj
+         Debug\shader.obj
+         Debug\models.obj
+     1>fbo.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+     1>glloadD.lib(gl_load_cpp.obj) : error LNK2038: mismatch detected for '_MSC_VER': value '1700' doesn't match value '1900' in fbo.obj
+     1>freeglutD.lib(freeglut_init.obj) : warning LNK4217: locally defined symbol _sscanf imported in function _glutInit
+     1>freeglutD.lib(freeglut_main.obj) : warning LNK4217: locally defined symbol _fprintf imported in function _fgError
+     1>freeglutD.lib(freeglut_display.obj) : warning LNK4049: locally defined symbol _fprintf imported
+     1>scene.obj : error LNK2019: unresolved external symbol "public: float * __thiscall MAT4::Pntr(void)" (?Pntr@MAT4@@QAEPAMXZ) referenced in function "public: void __thiscall Scene::DrawGround(unsigned int,class MAT4 &)" (?DrawGround@Scene@@QAEXIAAVMAT4@@@Z)
+     1>scene.obj : error LNK2019: unresolved external symbol "public: class MAT4 __thiscall MAT4::inverse(void)" (?inverse@MAT4@@QAE?AV1@XZ) referenced in function "public: void __thiscall Scene::DrawGround(unsigned int,class MAT4 &)" (?DrawGround@Scene@@QAEXIAAVMAT4@@@Z)
+     1>scene.obj : error LNK2019: unresolved external symbol "class MAT4 __cdecl Rotate(int,float)" (?Rotate@@YA?AVMAT4@@HM@Z) referenced in function "public: void __thiscall Scene::DrawScene(void)" (?DrawScene@Scene@@QAEXXZ)
+     1>scene.obj : error LNK2019: unresolved external symbol "class MAT4 __cdecl Scale(float,float,float)" (?Scale@@YA?AVMAT4@@MMM@Z) referenced in function "public: void __thiscall Scene::DrawSpheres(unsigned int,class MAT4 &)" (?DrawSpheres@Scene@@QAEXIAAVMAT4@@@Z)
+     1>models.obj : error LNK2001: unresolved external symbol "class MAT4 __cdecl Scale(float,float,float)" (?Scale@@YA?AVMAT4@@MMM@Z)
+     1>scene.obj : error LNK2019: unresolved external symbol "class MAT4 __cdecl Translate(struct glm::detail::tvec3<float>)" (?Translate@@YA?AVMAT4@@U?$tvec3@M@detail@glm@@@Z) referenced in function "public: void __thiscall Scene::DrawScene(void)" (?DrawScene@Scene@@QAEXXZ)
+     1>scene.obj : error LNK2019: unresolved external symbol "class MAT4 __cdecl Translate(float,float,float)" (?Translate@@YA?AVMAT4@@MMM@Z) referenced in function "public: void __thiscall Scene::DrawSpheres(unsigned int,class MAT4 &)" (?DrawSpheres@Scene@@QAEXIAAVMAT4@@@Z)
+     1>models.obj : error LNK2001: unresolved external symbol "class MAT4 __cdecl Translate(float,float,float)" (?Translate@@YA?AVMAT4@@MMM@Z)
+     1>scene.obj : error LNK2019: unresolved external symbol "class MAT4 __cdecl operator*(class MAT4,class MAT4)" (??D@YA?AVMAT4@@V0@0@Z) referenced in function "public: void __thiscall Scene::DrawSpheres(unsigned int,class MAT4 &)" (?DrawSpheres@Scene@@QAEXIAAVMAT4@@@Z)
+     1>models.obj : error LNK2001: unresolved external symbol "class MAT4 __cdecl operator*(class MAT4,class MAT4)" (??D@YA?AVMAT4@@V0@0@Z)
+     1>scene.obj : error LNK2019: unresolved external symbol "public: void __thiscall Texture::Read(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?Read@Texture@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) referenced in function "public: void __thiscall Scene::InitializeScene(void)" (?InitializeScene@Scene@@QAEXXZ)
+     1>scene.obj : error LNK2019: unresolved external symbol "public: void __thiscall Texture::Bind(int)" (?Bind@Texture@@QAEXH@Z) referenced in function "public: void __thiscall Scene::DrawGround(unsigned int,class MAT4 &)" (?DrawGround@Scene@@QAEXIAAVMAT4@@@Z)
+     1>scene.obj : error LNK2019: unresolved external symbol "public: void __thiscall Texture::Unbind(void)" (?Unbind@Texture@@QAEXXZ) referenced in function "public: void __thiscall Scene::DrawGround(unsigned int,class MAT4 &)" (?DrawGround@Scene@@QAEXIAAVMAT4@@@Z)
+     1>freeglutD.lib(freeglut_main.obj) : error LNK2019: unresolved external symbol __imp____iob_func referenced in function _fgError
+     1>freeglutD.lib(freeglut_display.obj) : error LNK2001: unresolved external symbol __imp____iob_func
+     1>freeglutD.lib(freeglut_main.obj) : error LNK2019: unresolved external symbol __imp__vfprintf referenced in function _fgError
+     1>freeglutD.lib(freeglut_joystick.obj) : error LNK2019: unresolved external symbol __imp___snprintf referenced in function _fghJoystickGetOEMProductName
+     1>C:\Users\Administrator\Desktop\College\DigiPen\Fall 2015\CS 541 - Adv. Computer Graphics\CS541-framework\CS541-framework\Debug\framework.exe : fatal error LNK1120: 13 unresolved externals
+     1>Done Building Project "C:\Users\Administrator\Desktop\College\DigiPen\Fall 2015\CS 541 - Adv. Computer Graphics\CS541-framework\CS541-framework\framework.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.80
