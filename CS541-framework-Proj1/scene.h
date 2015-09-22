@@ -70,5 +70,24 @@ public:
     void DrawSun(unsigned int program, MAT4& ModelTr);
     void DrawSpheres(unsigned int program, MAT4& ModelTr);
     void DrawGround(unsigned int program, MAT4& ModelTr);
+
+
+
+
+
+
+	//WorldView and WorldProj variables
+	float tilt = -90, spin = 0, tx = 0, ty = 0, zoom = 150, ry = 0.2, front = 0.1, back = 1000;
+	//= 0.2;   //ry* (width / height);
+	bool canMove = false, wDown = false, sDown = false, aDown = false, dDown = false;
+	time_t prevTime, currTime;
+	float speed = 1, diff;
+	vec3 eyePos = vec3(0, 250, 3); //vec3(0, 250, 3);
+	//float eyePosX=0.0, eyePosY=250, eyePosZ=4;
+	
+	MAT4 WorldView = MAT4();
+	MAT4 WorldProj = MAT4();
+	float curMouseX, curMouseY;
+
 };
 

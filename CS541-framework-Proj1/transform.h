@@ -32,6 +32,7 @@ public:
 };
 
 MAT4 Rotate(const int i, const float theta);
+MAT4 Scale(const vec3 s);
 MAT4 Scale(const float x, const float y, const float z);
 MAT4 Translate(const vec3 t);
 MAT4 Translate(const float x, const float y, const float z);

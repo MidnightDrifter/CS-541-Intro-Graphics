@@ -28,7 +28,8 @@ using namespace glm;
 #include "AntTweakBar.h"
 
 Scene scene;
-
+const float PI = 3.14159f;
+const float rad = PI / 180.0f;
 // Some globals used for mouse handling.
 int mouseX, mouseY;
 bool leftDown = false;
@@ -40,6 +41,32 @@ bool shifted;
 // Called by GLUT when the scene needs to be redrawn.
 void ReDraw()
 {
+	float rx =  (scene.width * scene.ry) / (scene.height);
+
+	if (scene.canMove)
+	{
+		vec3 temp = vec3(scene.eyePos[0] * -1, scene.eyePos[1] * -1, scene.eyePos[2] * -1);
+		scene.WorldView = Translate(temp) * Rotate(0, scene.tilt - 90) * Rotate(2, scene.spin);
+		//scene.WorldView = Translate(-1*scene.eyePos.x, -1*scene.eyePos.y, -1*scene.eyePos.z) * Rotate(0, scene.tilt - 90)*Rotate(2, scene.spin);
+		//scene.WorldView = scene.WorldView * Rotate(2, scene.spin);
+
+		//scene.WorldView = Rotate(2, scene.spin) * Rotate(0, scene.tilt - 90) *  Translate(-1 * scene.eyePos.x, -1 * scene.eyePos.y, -1 * scene.eyePos.z);
+		//scene.WorldView = Translate(-1 * scene.eyePos.x, -1 * scene.eyePos.y, -1 * scene.eyePos.z) * Rotate(2, scene.spin) * Rotate(0, scene.tilt - 90);
+		//scene.WorldView = Rotate(0, scene.tilt - 90) * Rotate(2, scene.spin) *Translate(-1 * scene.eyePos.x, -1 * scene.eyePos.y, -1 * scene.eyePos.z);
+	}
+	else
+	{
+		
+		scene.WorldView = Translate(scene.tx, scene.ty, -1 * scene.zoom) * Rotate(0, scene.tilt - 90) * Rotate(2, scene.spin);
+		//scene.WorldView = scene.WorldView * Rotate(2, scene.spin);
+
+	//	scene.WorldView = Translate(scene.tx, scene.ty, -1 * scene.zoom);
+	//	scene.WorldView = scene.WorldView * Rotate(0, scene.tilt - 90);
+//	scene.WorldView = scene.WorldView * Rotate(2, scene.spin);
+	}
+	scene.WorldProj = Perspective(rx, scene.ry, scene.front, scene.back);
+
+
     scene.DrawScene();
     TwDraw();
     glutSwapBuffers();
@@ -63,55 +90,126 @@ void ReshapeWindow(int w, int h)
 // Called by GLut for keyboard actions.
 void KeyboardDown(unsigned char key, int x, int y)
 {
-    if (TwEventKeyboardGLUT(key, x, y)) return;
+	if (TwEventKeyboardGLUT(key, x, y)) return;
 
-    switch(key) {
-    case '0':
-    case '1':
-    case '2':
-    case '3':
-    case '4':
-    case '5':
-    case '6':
-    case '7':
-    case '8':
-    case '9':
-        scene.mode = key-'0';
-        glutPostRedisplay();
-        break;
+	scene.prevTime = scene.currTime;
+	scene.currTime = time(&scene.currTime);
+	scene.diff = difftime(scene.currTime, scene.prevTime);
+	scene.speed = scene.speed*.9*scene.diff;
 
-    case 27:                    // Escape key
-    case 'q':
-        exit(0);
-    }
+
+
+
+
+	if (scene.canMove)
+	{
+		if (scene.wDown)
+		{
+			scene.eyePos += scene.speed*(sin((scene.spin)*PI / 180), cos(scene.spin*PI / 180), 0);
+		}
+		if (scene.aDown)
+		{
+			scene.eyePos += scene.speed*((-1 * cos(scene.spin*PI / 180)), sin((scene.spin)*PI / 180), 0);
+		}
+		if (scene.sDown)
+		{
+			scene.eyePos -= scene.speed*(sin((scene.spin)*PI / 180), cos(scene.spin*PI / 180), 0);
+
+		}
+		if (scene.dDown)
+		{
+			scene.eyePos -= scene.speed*((-1 * cos(scene.spin*PI / 180)), sin((scene.spin)*PI / 180), 0);
+		}
+	}
+
+
+
+
+
+	
+
+
+
+
+	switch (key) {
+
+	
+	
+	case '0':
+	case '1':
+	case '2':
+	case '3':
+	case '4':
+	case '5':
+	case '6':
+	case '7':
+	case '8':
+	case '9':
+		scene.mode = key - '0';
+		glutPostRedisplay();
+		break;
+
+
+
+
+	case 27:                    // Escape key
+	case 'q':
+	 exit(0);
+	case 'w':
+		scene.wDown = true;
+	case 's':
+		scene.sDown = true;
+	case 'a':
+		scene.aDown = true;
+	case 'd':
+		scene.dDown = true;
+
+	}
+
 }
 
 void KeyboardUp(unsigned char key, int x, int y)
 {
+
+	switch (key)
+	{
+	case'p':
+		scene.canMove = (!scene.canMove);
+	case 'w':
+		scene.wDown = false;
+	case 's':
+		scene.sDown = false;
+	case 'a':
+		scene.aDown = false;
+	case 'd':
+		scene.dDown = false;
+	}
+	if (TwEventKeyboardGLUT(key, x, y)) return;
+
 }
 
 ////////////////////////////////////////////////////////////////////////
 // Called by GLut when a mouse button changes state.
 void MouseButton(int button, int state, int x, int y)
 {
-    if (TwEventMouseButtonGLUT(button, state, x, y)) return;
+	//if (TwEventMouseButtonGLUT(button, state, x, y)) return;
 
-    // To determine if the shift was pressed:
-    // if (glutGetModifiers() & GLUT_ACTIVE_SHIFT) ...
+	// To determine if the shift was pressed:
+	// if (glutGetModifiers() & GLUT_ACTIVE_SHIFT) ...
 
-    // To determine which button changed state:
-    // if (button == GLUT_LEFT_BUTTON)
-    // if (button == GLUT_MIDDLE_BUTTON)
-    // if (button == GLUT_RIGHT_BUTTON)
+	// To determine which button changed state:
+	// if (button == GLUT_LEFT_BUTTON)
+	// if (button == GLUT_MIDDLE_BUTTON)
+	// if (button == GLUT_RIGHT_BUTTON)
 
-    // To determine its new state:
-    // if (state == GLUT_UP)
-    // if (state == GLUT_DOWN)
-
-
+	// To determine its new state:
+	// if (state == GLUT_UP)
+	// if (state == GLUT_DOWN)
 
 
-	if(glutGetModifiers() && GLUT_ACTIVE_SHIFT)
+
+
+	if (glutGetModifiers() && GLUT_ACTIVE_SHIFT)
 	{
 		shifted = true;
 	}
@@ -123,53 +221,148 @@ void MouseButton(int button, int state, int x, int y)
 
 
 	if (button == GLUT_LEFT_BUTTON)
-		{ if (state == (GLUT_UP))
 	{
-		leftDown = false;
-	}
-			
-		else if(state == GLUT_DOWN)
+		if (state == (GLUT_UP))
+		{
+			leftDown = false;
+		}
+
+		else if (state == GLUT_DOWN)
 		{
 			leftDown = true;
 		}
 	}
 	else if (button == GLUT_RIGHT_BUTTON)
+	{
+		if (state == (GLUT_UP))
 		{
-			if (state == (GLUT_UP))
-			{
-				rightDown = false;
-			}
+			rightDown = false;
 
-			else if (state == GLUT_DOWN)
-			{
-				rightDown = true;
-			}
-	
-	
+		}
+
+		else if (state == GLUT_DOWN)
+		{
+			rightDown = true;
+		}
+
 	}
-	else if (button == GLUT_MIDDLE_BUTTON)
-		{ 
-			if (state == (GLUT_UP))
-			{
-				middleDown = false;
-			}
 
-			else if (state == GLUT_DOWN)
-			{
-				middleDown = true;
-			}
-	
-	
+	else if (button == 3 || button == 4)
+	{
+		if (button == 3)
+		{
+			scene.zoom -= .50;
+		}
+		else
+		{
+			scene.zoom += .50;
+		}
+
 	}
-    glutPostRedisplay();
 
+
+
+	glutPostRedisplay();
+	if (TwEventMouseButtonGLUT(button, state, x, y)) return;
 }
 
 ////////////////////////////////////////////////////////////////////////
 // Called by GLut when a mouse moves (while a button is down)
 void MouseMotion(int x, int y)
 {
-    if (TwEventMouseMotionGLUT(x,y)) return;
+	if (TwEventMouseMotionGLUT(x, y)) return;
+
+	//(x, y) = current position on screen
+	if (!scene.canMove)
+	{
+
+		if (leftDown)
+		{
+			//Left right motion, left increases, right decreases spin.
+
+			float tempX, tempY;
+			tempX = x - scene.curMouseX;
+			tempY = y - scene.curMouseY;
+
+			if (tempY > 0)  //Moved up, increase tilt
+			{
+				scene.tilt += y/100;
+			}
+			if (tempY < 0)  //Moved dowwn, decrease tilt
+			{
+				scene.tilt -= y/100;
+			}
+
+			if (tempX >0)
+			{
+				scene.spin -= x/100;
+			}
+
+			if (tempX < 0)
+			{
+				scene.spin += x/100;
+			}
+
+
+			scene.curMouseX = x;
+			scene.curMouseY = y;
+
+
+			//scene.spin -= (x / 100.0);
+
+			//Up down motion, up increases, down decreases tilt
+			//scene.tilt += (y / 100.0);
+
+
+
+		}
+		else if (rightDown)
+		{
+			//Sliding motion, changes tx and ty
+			float tempX, tempY;
+			tempX = x - scene.curMouseX;
+			tempY = y - scene.curMouseY;
+
+			if (tempY > 0)  //Moved up,
+			{
+				scene.ty += y/200;
+			}
+			if (tempY < 0)  //Moved dowwn, 
+			{
+				scene.ty -= y/200;
+			}
+
+			if (tempX >0)
+			{
+				scene.tx += x/200;
+			}
+
+			if (tempX < 0)
+			{
+				scene.tx -= x/200;
+			}
+
+			
+		//	scene.ty += tempX;
+			//	scene.tx += tempY;
+
+			scene.curMouseX = x;
+			scene.curMouseY = y;
+
+
+
+			//scene.tx += x/1000.0;
+			//scene.ty += y/1000.0;
+
+		}
+
+		else
+		{
+			//Do nothing
+		}
+	}
+
+	//if (TwEventMouseMotionGLUT(x,y)) return;
 
 }
 
