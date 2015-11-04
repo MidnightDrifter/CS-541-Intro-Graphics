@@ -1,0 +1,29 @@
+﻿Build started 11/3/2015 2:35:54 PM.
+     1>Project "C:\Users\Administrator\Desktop\College\DigiPen\Fall 2015\CS 541 - Adv. Computer Graphics\CS541-framework (7)\CS541-framework\framework.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Iglsdk\boost\boost /Iglsdk\glload\include /Iglsdk\glimg\include /Iglsdk\glm /Iglsdk\freeglut\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D FREEGLUT_STATIC /D _LIB /D FREEGLUT_LIB_PRAGMAS=0 /D _ITERATOR_DEBUG_LEVEL=2 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt scene.cpp
+         scene.cpp
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework (7)\cs541-framework\glsdk\glm\glm\gtx\string_cast.inl(30): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(1465): note: see declaration of 'vsprintf'
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework (7)\cs541-framework\transform.h(20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework (7)\cs541-framework\scene.h(87): warning C4305: 'initializing': truncation from 'double' to 'float'
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework (7)\cs541-framework\scene.cpp(224): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework (7)\cs541-framework\scene.cpp(231): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework (7)\cs541-framework\scene.cpp(240): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework (7)\cs541-framework\scene.cpp(249): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\administrator\desktop\college\digipen\fall 2015\cs 541 - adv. computer graphics\cs541-framework (7)\cs541-framework\scene.cpp(61): warning C4715: 'HSV2RGB': not all control paths return a value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator\Desktop\College\DigiPen\Fall 2015\CS 541 - Adv. Computer Graphics\CS541-framework (7)\CS541-framework\Debug\framework.exe" /INCREMENTAL /NOLOGO /LIBPATH:glsdk\glload\lib /LIBPATH:glsdk\glimg\lib /LIBPATH:glsdk\freeglut\lib glloadD.lib glimgD.lib freeglutD.lib glu32.lib opengl32.lib gdi32.lib winmm.lib user32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Administrator\Desktop\College\DigiPen\Fall 2015\CS 541 - Adv. Computer Graphics\CS541-framework (7)\CS541-framework\Debug\framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\Users\Administrator\Desktop\College\DigiPen\Fall 2015\CS 541 - Adv. Computer Graphics\CS541-framework (7)\CS541-framework\Debug\framework.lib" /MACHINE:X86 /SAFESEH Debug\fbo.obj
+         Debug\framework.obj
+         Debug\rply.obj
+         Debug\scene.obj
+         Debug\shader.obj
+         Debug\models.obj
+         Debug\texture.obj
+         Debug\transform.obj
+         framework.vcxproj -> C:\Users\Administrator\Desktop\College\DigiPen\Fall 2015\CS 541 - Adv. Computer Graphics\CS541-framework (7)\CS541-framework\Debug\framework.exe
+     1>Done Building Project "C:\Users\Administrator\Desktop\College\DigiPen\Fall 2015\CS 541 - Adv. Computer Graphics\CS541-framework (7)\CS541-framework\framework.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.29
